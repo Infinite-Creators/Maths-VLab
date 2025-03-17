@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express-validator": "^7.2.1",
+    "mongoose": "^8.12.1"
+  }
+}

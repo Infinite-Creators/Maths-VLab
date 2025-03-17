@@ -207,4 +207,114 @@
     from { opacity: 0; transform: scale(0.97); }
     to { opacity: 1; transform: scale(1); }
   }
+
+/* ====== Popup Overlay (Backdrop Effect) ====== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ====== Popup Content (Main Box) ====== */
+.popup-content {
+  display: flex;
+  width: 550px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ====== Left Panel (Image Section) ====== */
+.left-panel {
+  display: none;
+}
+
+/* ====== Right Panel (Form Section) ====== */
+.right-panel {
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* ====== Inputs and Button ====== */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ====== Mobile View Adjustments ====== */
+@media (min-width: 768px) {
+  .popup-content {
+      flex-direction: row;
+      width: 700px;
+  }
+
+  .left-panel {
+      display: block;
+      width: 45%;
+  }
+
+  .left-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .right-panel {
+      width: 55%;
+  }
+}
+
+/* ====== Smooth Slide-in Animation ====== */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(50%) scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+  }
+}
+
   
