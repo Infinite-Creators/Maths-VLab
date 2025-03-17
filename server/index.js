@@ -7,7 +7,6 @@ const StudentModel = require('./Models/Student');
 const app = express();
 app.use(express.json());
 app.use(cors());
-const validateUserInput = require('./middlewares/validation');
 
 const PORT = 3001;
 
